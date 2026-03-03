@@ -1,0 +1,9 @@
+# robots.txt for EcoNest Packaging
+# https://terravanda-packaging.vercel.app/
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Specify sitemap location
+Sitemap: https://terravanda-packaging.vercel.app/sitemap.xml
