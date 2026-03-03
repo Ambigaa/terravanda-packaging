@@ -1,0 +1,409 @@
+<!-- products.html - Complete Products Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>"> 
+  <title>Eco-Friendly Packaging Products | TerraVanda</title>
+  <meta name="description" content="Explore our range of sustainable packaging: biodegradable boxes, compostable mailers, recycled paper bags, and custom eco-friendly solutions for your brand.">
+  <meta name="keywords" content="biodegradable boxes, compostable mailers, recycled paper bags, custom eco packaging, sustainable packaging products">
+  <meta property="og:title" content="Eco-Friendly Packaging Products | EcoNest">
+  <meta property="og:description" content="Shop our collection of plastic-free, compostable, and recycled packaging solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://terravandapackaging.com/products">
+  <meta property="og:image" content="/images/products-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Google Analytics Placeholder -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  
+  <!-- Tailwind CSS -->
+  <link href="src/style.css" rel="stylesheet">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    .fade-up.show { opacity: 1; transform: translateY(0); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15); }
+  </style>
+</head>
+<body class="antialiased text-stone-700 bg-neutral-50">
+  <!-- Navigation (copy exactly from index.html) -->
+  <nav id="navbar" class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-2">
+          <span class="text-3xl font-bold text-emerald-700 tracking-tight">TerraVanda <span class="text-stone-500">Packaging</span></span>
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Home</a>
+          <a href="about.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">About</a>
+          <a href="products.html" class="nav-link text-emerald-700 font-medium border-b-2 border-emerald-700 pb-1">Products</a>
+          <a href="industries.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Industries</a>
+          <a href="blog.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Blog</a>
+          <a href="contact.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Contact</a>
+          <a href="contact.html" class="bg-emerald-700 hover:bg-emerald-800 text-white px-5 py-2.5 rounded-lg font-medium transition shadow-sm">Get Quote</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg text-stone-600 hover:bg-stone-100 focus:outline-none">
+          <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-stone-200 px-4 py-6">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="text-stone-600 hover:text-emerald-700 py-2">Home</a>
+        <a href="about.html" class="text-stone-600 hover:text-emerald-700 py-2">About</a>
+        <a href="products.html" class="text-emerald-700 font-medium py-2">Products</a>
+        <a href="industries.html" class="text-stone-600 hover:text-emerald-700 py-2">Industries</a>
+        <a href="blog.html" class="text-stone-600 hover:text-emerald-700 py-2">Blog</a>
+        <a href="contact.html" class="text-stone-600 hover:text-emerald-700 py-2">Contact</a>
+        <a href="contact.html" class="bg-emerald-700 text-white text-center px-4 py-3 rounded-lg font-medium">Get Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section - 1 -->
+    <section class="bg-gradient-to-br from-emerald-800 to-emerald-900 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">Our Products</h1>
+        <p class="text-xl text-emerald-100 max-w-3xl mx-auto">
+          Sustainable packaging solutions that don't compromise on quality, durability, or design.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4 justify-center">
+          <a href="#product-grid" class="bg-white text-emerald-800 hover:bg-emerald-50 px-8 py-4 rounded-lg font-semibold transition shadow-lg">Browse All Products</a>
+          <a href="/contact.html" class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition">Request Custom Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features/Trust Badges - 2 -->
+    <section class="py-12 bg-white border-b border-stone-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <span class="text-3xl">🌱</span>
+            <p class="font-semibold mt-2">Plastic-Free</p>
+          </div>
+          <div>
+            <span class="text-3xl">♻️</span>
+            <p class="font-semibold mt-2">100% Recyclable</p>
+          </div>
+          <div>
+            <span class="text-3xl">📦</span>
+            <p class="font-semibold mt-2">Low MOQs</p>
+          </div>
+          <div>
+            <span class="text-3xl">🚚</span>
+            <p class="font-semibold mt-2">Fast Shipping</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid Section - 3 (Main Product Display) -->
+    <section id="product-grid" class="py-20 bg-neutral-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-emerald-700 font-semibold text-lg">OUR COLLECTION</span>
+          <h2 class="mt-3 text-4xl font-bold text-stone-800">Sustainable Solutions for Every Brand</h2>
+          <p class="mt-4 text-xl text-stone-500">Choose from our range of eco-friendly packaging options</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Product 1 - Biodegradable Boxes -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover">
+            <div class="h-56 bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center">
+              <span class="text-7xl">📦</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-stone-800">Biodegradable Boxes</h3>
+              <p class="text-sm text-emerald-600 font-semibold mt-1">Starting at $0.99/unit</p>
+              <p class="mt-3 text-stone-500">100% recyclable cardboard boxes with plant-based coating. Perfect for shipping and retail.</p>
+              
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>FSC Certified</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>Custom sizes available</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>MOQ: 100 units</span>
+                </div>
+              </div>
+              
+              <div class="mt-6 flex gap-2">
+                <button class="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-3 rounded-lg font-medium transition text-sm">Get Quote</button>
+                <button class="border border-emerald-700 text-emerald-700 hover:bg-emerald-50 px-4 py-3 rounded-lg font-medium transition text-sm">Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 - Compostable Mailers -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover">
+            <div class="h-56 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+              <span class="text-7xl">✉️</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-stone-800">Compostable Mailers</h3>
+              <p class="text-sm text-emerald-600 font-semibold mt-1">Starting at $0.49/unit</p>
+              <p class="mt-3 text-stone-500">Home-compostable shipping bags that break down in 180 days. Water-resistant and tear-proof.</p>
+              
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>BPI Certified</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>Self-sealing</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>MOQ: 500 units</span>
+                </div>
+              </div>
+              
+              <div class="mt-6 flex gap-2">
+                <button class="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-3 rounded-lg font-medium transition text-sm">Get Quote</button>
+                <button class="border border-emerald-700 text-emerald-700 hover:bg-emerald-50 px-4 py-3 rounded-lg font-medium transition text-sm">Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 - Recycled Paper Bags -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover">
+            <div class="h-56 bg-gradient-to-br from-stone-100 to-stone-200 flex items-center justify-center">
+              <span class="text-7xl">🛍️</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-stone-800">Recycled Paper Bags</h3>
+              <p class="text-sm text-emerald-600 font-semibold mt-1">Starting at $0.79/unit</p>
+              <p class="mt-3 text-stone-500">Made from 100% post-consumer waste. Strong, reusable, and customizable with your brand.</p>
+              
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>Reinforced handles</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>Custom printing</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>MOQ: 250 units</span>
+                </div>
+              </div>
+              
+              <div class="mt-6 flex gap-2">
+                <button class="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-3 rounded-lg font-medium transition text-sm">Get Quote</button>
+                <button class="border border-emerald-700 text-emerald-700 hover:bg-emerald-50 px-4 py-3 rounded-lg font-medium transition text-sm">Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 - Custom Eco Packaging -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover">
+            <div class="h-56 bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center">
+              <span class="text-7xl">🎨</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-stone-800">Custom Eco Packaging</h3>
+              <p class="text-sm text-emerald-600 font-semibold mt-1">Pricing varies</p>
+              <p class="mt-3 text-stone-500">Tailor-made solutions for unique products. We'll design packaging that fits your needs perfectly.</p>
+              
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>Custom shapes & sizes</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>Brand design</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>MOQ: 500 units</span>
+                </div>
+              </div>
+              
+              <div class="mt-6 flex gap-2">
+                <button class="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-3 rounded-lg font-medium transition text-sm">Get Quote</button>
+                <button class="border border-emerald-700 text-emerald-700 hover:bg-emerald-50 px-4 py-3 rounded-lg font-medium transition text-sm">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison/Features Section - 4 -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="fade-up">
+            <h2 class="text-3xl font-bold text-stone-800">Why Our Products Stand Out</h2>
+            <p class="mt-4 text-lg text-stone-500">We don't just make sustainable packaging - we make better packaging that happens to be sustainable.</p>
+            
+            <div class="mt-8 space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 mt-1">✓</div>
+                <div>
+                  <h3 class="font-semibold">Superior Durability</h3>
+                  <p class="text-stone-500">Tested to withstand shipping and handling, matching or exceeding traditional materials.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 mt-1">✓</div>
+                <div>
+                  <h3 class="font-semibold">Eco-Certifications</h3>
+                  <p class="text-stone-500">All products carry FSC, BPI, or other recognized sustainability certifications.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 mt-1">✓</div>
+                <div>
+                  <h3 class="font-semibold">Brand Customization</h3>
+                  <p class="text-stone-500">Full-color printing, custom sizes, and unique finishes to match your brand identity.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-stone-50 p-8 rounded-2xl fade-up">
+            <h3 class="text-xl font-bold mb-4">Material Comparison</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1"><span>Durability</span><span class="font-semibold">★★★★★</span></div>
+                <div class="w-full bg-stone-200 rounded-full h-2"><div class="bg-emerald-600 h-2 rounded-full" style="width:95%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1"><span>Eco-Friendliness</span><span class="font-semibold">★★★★★</span></div>
+                <div class="w-full bg-stone-200 rounded-full h-2"><div class="bg-emerald-600 h-2 rounded-full" style="width:100%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1"><span>Cost Effectiveness</span><span class="font-semibold">★★★★☆</span></div>
+                <div class="w-full bg-stone-200 rounded-full h-2"><div class="bg-emerald-600 h-2 rounded-full" style="width:85%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1"><span>Customization</span><span class="font-semibold">★★★★★</span></div>
+                <div class="w-full bg-stone-200 rounded-full h-2"><div class="bg-emerald-600 h-2 rounded-full" style="width:95%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section - 5 -->
+    <section class="py-20 bg-stone-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-stone-800">Frequently Asked Questions</h2>
+          <p class="mt-4 text-lg text-stone-500">Everything you need to know about our products</p>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-lg">What's the minimum order quantity?</h3>
+            <p class="mt-2 text-stone-500">MOQs vary by product: 100 units for boxes, 500 for mailers, 250 for bags. Custom projects start at 500 units. We offer sample packs for testing.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-lg">How long does shipping take?</h3>
+            <p class="mt-2 text-stone-500">Standard production takes 7-10 business days, plus shipping. Express options available. We offset carbon for all deliveries.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-lg">Can I get samples before ordering?</h3>
+            <p class="mt-2 text-stone-500">Yes! Request a sample kit through our contact form. Sample packs include 3-5 product samples for $25 (refundable with first order).</p>
+          </div>
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-lg">Are your products food-safe?</h3>
+            <p class="mt-2 text-stone-500">Most of our products are food-safe and FDA-compliant. Check individual product specs or ask our team for food-grade certifications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section - 6 -->
+    <section class="py-20 bg-emerald-700">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-3xl font-bold text-white">Ready to Make the Switch?</h2>
+        <p class="mt-4 text-xl text-emerald-100">Get a custom quote tailored to your brand's needs</p>
+        <div class="mt-8 flex flex-wrap gap-4 justify-center">
+          <a href="contact.html" class="bg-white text-emerald-700 hover:bg-emerald-50 px-8 py-4 rounded-lg font-semibold transition shadow-lg">Request Quote</a>
+          <a href="contact.html" class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition">Talk to an Expert</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (copy exactly from index.html) -->
+  <footer class="bg-stone-900 text-stone-400 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 pb-12 border-b border-stone-800">
+        <div>
+          <h4 class="text-2xl font-bold text-white">TerraVanda <span class="text-emerald-500">Packaging</span></h4>
+          <p class="mt-4 text-sm">Sustainable packaging solutions for a plastic-free future.</p>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-4">Products</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="products.html" class="hover:text-white transition">Biodegradable Boxes</a></li>
+            <li><a href="products.html" class="hover:text-white transition">Compostable Mailers</a></li>
+            <li><a href="products.html" class="hover:text-white transition">Recycled Bags</a></li>
+            <li><a href="products.html" class="hover:text-white transition">Custom Packaging</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-4">Company</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+            <li><a href="industries.html" class="hover:text-white transition">Industries</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-4">Newsletter</h5>
+          <form id="newsletterFooter" class="space-y-3">
+            <input type="email" placeholder="Email address" class="w-full px-4 py-3 bg-stone-800 border border-stone-700 rounded-lg text-white text-sm">
+            <button class="w-full bg-emerald-700 hover:bg-emerald-600 text-white px-4 py-3 rounded-lg font-medium transition">Subscribe</button>
+          </form>
+          <p id="footerNewsMsg" class="text-xs mt-2 text-emerald-400"></p>
+        </div>
+      </div>
+      <div class="pt-8 text-sm text-center">
+        <p>© 2025 TerraVanda Packaging. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="src/script.js"></script>
+</body>
+</html>

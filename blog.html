@@ -1,0 +1,391 @@
+<!-- blog.html - Complete Blog Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+  <title>Blog | Sustainable Packaging Insights & Trends</title>
+  <meta name="description" content="Read expert articles on sustainable packaging benefits, eco-friendly trends, green supply chain insights, and tips for switching to biodegradable materials.">
+  <meta name="keywords" content="sustainable packaging blog, eco-friendly packaging articles, green packaging trends, sustainability insights">
+  <meta property="og:title" content="EcoNest Blog - Sustainable Packaging Insights">
+  <meta property="og:description" content="Expert insights on sustainable packaging, eco-friendly trends, and green business practices.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://terravandapackaging.com/blog">
+  <meta property="og:image" content="/images/blog-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Google Analytics Placeholder -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  
+  <!-- Tailwind CSS -->
+  <link href="src/style.css" rel="stylesheet">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    .fade-up.show { opacity: 1; transform: translateY(0); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15); }
+  </style>
+</head>
+<body class="antialiased text-stone-700 bg-neutral-50">
+  <!-- Navigation (complete) -->
+  <nav id="navbar" class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-2">
+          <span class="text-3xl font-bold text-emerald-700 tracking-tight">TerraVanda <span class="text-stone-500">Packaging</span></span>
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Home</a>
+          <a href="about.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">About</a>
+          <a href="products.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Products</a>
+          <a href="industries.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Industries</a>
+          <a href="blog.html" class="nav-link text-emerald-700 font-medium border-b-2 border-emerald-700 pb-1">Blog</a>
+          <a href="contact.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Contact</a>
+          <a href="contact.html" class="bg-emerald-700 hover:bg-emerald-800 text-white px-5 py-2.5 rounded-lg font-medium transition shadow-sm">Get Quote</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg text-stone-600 hover:bg-stone-100 focus:outline-none">
+          <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-stone-200 px-4 py-6">
+      <div class="flex flex-col space-y-4">
+        <a href="#" class="text-stone-600 hover:text-emerald-700 py-2">Home</a>
+        <a href="about.html" class="text-stone-600 hover:text-emerald-700 py-2">About</a>
+        <a href="products.html" class="text-stone-600 hover:text-emerald-700 py-2">Products</a>
+        <a href="industries.html" class="text-stone-600 hover:text-emerald-700 py-2">Industries</a>
+        <a href="blog.html" class="text-emerald-700 font-medium py-2">Blog</a>
+        <a href="contact.html" class="text-stone-600 hover:text-emerald-700 py-2">Contact</a>
+        <a href="contact.html" class="bg-emerald-700 text-white text-center px-4 py-3 rounded-lg font-medium">Get Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section - 1 (Enhanced) -->
+    <section class="relative bg-gradient-to-br from-stone-800 to-stone-900 text-white py-24 overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0 bg-black"></div>
+    </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <span class="inline-block bg-emerald-600 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">📝 INSIGHTS & TRENDS</span>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">Our <span class="text-emerald-400">Blog</span></h1>
+        <p class="text-xl text-stone-300 max-w-3xl mx-auto">
+          Expert insights, trends, and tips to help you make the switch to sustainable packaging
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4 justify-center">
+          <a href="#featured" class="bg-white text-stone-800 hover:bg-stone-100 px-8 py-4 rounded-lg font-semibold transition shadow-lg">Read Featured Posts</a>
+          <a href="#categories" class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition">Browse Topics</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Post Section - 2 (New) -->
+    <section id="featured" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="text-emerald-700 font-semibold text-lg">FEATURED</span>
+          <h2 class="mt-3 text-4xl font-bold text-stone-800">Editor's Pick</h2>
+        </div>
+        
+        <div class="bg-gradient-to-br from-emerald-50 to-stone-50 rounded-3xl overflow-hidden shadow-xl">
+          <div class="grid lg:grid-cols-2">
+            <div class="p-12">
+              <div class="flex items-center gap-2 text-sm text-emerald-600 mb-4">
+                <span class="bg-emerald-200 px-3 py-1 rounded-full">🌟 Featured</span>
+                <span>• 10 min read</span>
+              </div>
+              <h3 class="text-3xl font-bold text-stone-800">The Complete Guide to Switching to Sustainable Packaging</h3>
+              <p class="mt-4 text-lg text-stone-500">Everything you need to know about materials, costs, certifications, and implementation. A step-by-step guide for brands ready to make the change.</p>
+              <a href="#" class="mt-8 inline-block bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-4 rounded-lg font-semibold transition">Read Full Article →</a>
+            </div>
+            <div class="bg-gradient-to-br from-emerald-200 to-emerald-300 flex items-center justify-center p-12">
+              <span class="text-9xl">📚</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Categories - 3 (New) -->
+    <section id="categories" class="py-12 bg-stone-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap gap-3 justify-center">
+          <span class="bg-emerald-700 text-white px-6 py-3 rounded-full font-medium">All Posts</span>
+          <span class="bg-white text-stone-700 hover:bg-emerald-100 px-6 py-3 rounded-full font-medium cursor-pointer transition">Sustainability</span>
+          <span class="bg-white text-stone-700 hover:bg-emerald-100 px-6 py-3 rounded-full font-medium cursor-pointer transition">Packaging Tips</span>
+          <span class="bg-white text-stone-700 hover:bg-emerald-100 px-6 py-3 rounded-full font-medium cursor-pointer transition">Industry Trends</span>
+          <span class="bg-white text-stone-700 hover:bg-emerald-100 px-6 py-3 rounded-full font-medium cursor-pointer transition">Case Studies</span>
+          <span class="bg-white text-stone-700 hover:bg-emerald-100 px-6 py-3 rounded-full font-medium cursor-pointer transition">Eco Innovation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts Grid - 4 (Enhanced) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Post 1 -->
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-stone-100">
+            <div class="h-48 bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center">
+              <span class="text-5xl">🌱</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-stone-500 mb-3">
+                <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Sustainability</span>
+                <span>• 5 min read</span>
+              </div>
+              <h2 class="text-2xl font-bold text-stone-800 hover:text-emerald-700 transition">
+                <a href="#">Benefits of Sustainable Packaging</a>
+              </h2>
+              <div class="mt-2 text-sm text-stone-500">By Sarah Chen • March 1, 2025</div>
+              <p class="mt-4 text-stone-500">Sustainable packaging reduces carbon footprint, appeals to conscious consumers, and often lowers shipping costs due to lighter materials...</p>
+              <a href="#" class="mt-4 inline-block text-emerald-700 font-semibold hover:text-emerald-800">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-stone-100">
+            <div class="h-48 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+              <span class="text-5xl">📊</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-stone-500 mb-3">
+                <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Branding</span>
+                <span>• 4 min read</span>
+              </div>
+              <h2 class="text-2xl font-bold text-stone-800 hover:text-emerald-700 transition">
+                <a href="#">How Eco Packaging Improves Brand Image</a>
+              </h2>
+              <div class="mt-2 text-sm text-stone-500">By Marcus Green • February 15, 2025</div>
+              <p class="mt-4 text-stone-500">Studies show 73% of consumers prefer brands using sustainable packaging. Discover how your packaging choices influence customer perception...</p>
+              <a href="#" class="mt-4 inline-block text-emerald-700 font-semibold hover:text-emerald-800">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-stone-100">
+            <div class="h-48 bg-gradient-to-br from-stone-100 to-stone-200 flex items-center justify-center">
+              <span class="text-5xl">🔮</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-stone-500 mb-3">
+                <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Trends</span>
+                <span>• 6 min read</span>
+              </div>
+              <h2 class="text-2xl font-bold text-stone-800 hover:text-emerald-700 transition">
+                <a href="#">Future of Green Supply Chains</a>
+              </h2>
+              <div class="mt-2 text-sm text-stone-500">By Priya Patel • January 28, 2025</div>
+              <p class="mt-4 text-stone-500">From blockchain traceability to circular economy models, explore the innovations shaping sustainable supply chains in 2025 and beyond...</p>
+              <a href="#" class="mt-4 inline-block text-emerald-700 font-semibold hover:text-emerald-800">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Post 4 (New) -->
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-stone-100">
+            <div class="h-48 bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center">
+              <span class="text-5xl">📦</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-stone-500 mb-3">
+                <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Materials</span>
+                <span>• 7 min read</span>
+              </div>
+              <h2 class="text-2xl font-bold text-stone-800 hover:text-emerald-700 transition">
+                <a href="#">Biodegradable vs. Compostable: What's the Difference?</a>
+              </h2>
+              <div class="mt-2 text-sm text-stone-500">By David Kim • January 10, 2025</div>
+              <p class="mt-4 text-stone-500">Understanding the key differences between biodegradable and compostable materials, and which is right for your products...</p>
+              <a href="#" class="mt-4 inline-block text-emerald-700 font-semibold hover:text-emerald-800">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Post 5 (New) -->
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-stone-100">
+            <div class="h-48 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+              <span class="text-5xl">💰</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-stone-500 mb-3">
+                <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Business</span>
+                <span>• 5 min read</span>
+              </div>
+              <h2 class="text-2xl font-bold text-stone-800 hover:text-emerald-700 transition">
+                <a href="#">Cost Analysis: Sustainable vs. Traditional Packaging</a>
+              </h2>
+              <div class="mt-2 text-sm text-stone-500">By Sarah Chen • December 5, 2024</div>
+              <p class="mt-4 text-stone-500">A detailed breakdown of costs, savings, and ROI when switching to sustainable packaging solutions...</p>
+              <a href="#" class="mt-4 inline-block text-emerald-700 font-semibold hover:text-emerald-800">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Post 6 (New) -->
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-stone-100">
+            <div class="h-48 bg-gradient-to-br from-stone-100 to-stone-200 flex items-center justify-center">
+              <span class="text-5xl">🏆</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-stone-500 mb-3">
+                <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Case Study</span>
+                <span>• 8 min read</span>
+              </div>
+              <h2 class="text-2xl font-bold text-stone-800 hover:text-emerald-700 transition">
+                <a href="#">How GreenLeaf Reduced Waste by 40%</a>
+              </h2>
+              <div class="mt-2 text-sm text-stone-500">By Priya Patel • November 18, 2024</div>
+              <p class="mt-4 text-stone-500">A case study on how GreenLeaf Organics transformed their packaging and saved money while helping the planet...</p>
+              <a href="#" class="mt-4 inline-block text-emerald-700 font-semibold hover:text-emerald-800">Read More →</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+          <button class="border-2 border-emerald-700 text-emerald-700 hover:bg-emerald-50 px-8 py-4 rounded-lg font-semibold transition">Load More Articles</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Topics Section - 5 (New) -->
+    <section class="py-20 bg-stone-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-stone-800">Popular Topics</h2>
+          <p class="mt-4 text-lg text-stone-500">Most read categories and tags</p>
+        </div>
+        
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-xl text-center card-hover">
+            <span class="text-4xl">🌱</span>
+            <h3 class="font-semibold mt-3">Sustainability</h3>
+            <p class="text-sm text-stone-500 mt-1">24 articles</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl text-center card-hover">
+            <span class="text-4xl">📦</span>
+            <h3 class="font-semibold mt-3">Packaging Tips</h3>
+            <p class="text-sm text-stone-500 mt-1">18 articles</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl text-center card-hover">
+            <span class="text-4xl">📊</span>
+            <h3 class="font-semibold mt-3">Industry Trends</h3>
+            <p class="text-sm text-stone-500 mt-1">15 articles</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl text-center card-hover">
+            <span class="text-4xl">🏆</span>
+            <h3 class="font-semibold mt-3">Case Studies</h3>
+            <p class="text-sm text-stone-500 mt-1">12 articles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section - 6 (Enhanced) -->
+    <section class="py-20 bg-gradient-to-r from-emerald-700 to-emerald-800 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <span class="text-emerald-200 font-semibold">📬 STAY UPDATED</span>
+        <h2 class="text-4xl font-bold mt-4">Never Miss an Article</h2>
+        <p class="mt-4 text-xl text-emerald-100">Get the latest sustainable packaging insights delivered to your inbox</p>
+        
+        <form id="newsletterBlog" class="mt-10 flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-white/50" required>
+          <button type="submit" class="bg-white text-emerald-800 hover:bg-emerald-50 px-8 py-4 rounded-xl font-semibold transition shadow-lg">Subscribe Now</button>
+        </form>
+        <p id="newsletterMsg" class="mt-4 text-sm text-emerald-200"></p>
+        <p class="mt-4 text-emerald-200 text-sm">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (complete) -->
+  <footer class="bg-stone-900 text-stone-400 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 pb-12 border-b border-stone-800">
+        <div>
+          <h4 class="text-2xl font-bold text-white">TerraVanda <span class="text-emerald-500">Packaging</span></h4>
+          <p class="mt-4 text-sm">Sustainable packaging solutions for a plastic-free future.</p>
+          <div class="mt-4 flex space-x-4">
+             <!-- Facebook -->
+             <a href="#" class="text-stone-400 hover:text-white transition text-xl">
+                <i class="fab fa-facebook-f"></i>
+            </a> 
+          <!-- Instagram -->
+            <a href="#" class="text-stone-400 hover:text-white transition text-xl">
+            <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Twitter/X -->
+            <a href="#" class="text-stone-400 hover:text-white transition text-xl">
+            <i class="fab fa-x-twitter"></i>
+            </a>
+  
+            <!-- LinkedIn -->
+            <a href="#" class="text-stone-400 hover:text-white transition text-xl">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-4">Products</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="products.html" class="hover:text-white transition">Biodegradable Boxes</a></li>
+            <li><a href="products.html" class="hover:text-white transition">Compostable Mailers</a></li>
+            <li><a href="products.html" class="hover:text-white transition">Recycled Bags</a></li>
+            <li><a href="products.html" class="hover:text-white transition">Custom Packaging</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-4">Company</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+            <li><a href="industries.html" class="hover:text-white transition">Industries</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-4">Newsletter</h5>
+          <form id="newsletterFooter" class="space-y-3">
+            <input type="email" placeholder="Email address" class="w-full px-4 py-3 bg-stone-800 border border-stone-700 rounded-lg text-white text-sm placeholder-stone-400">
+            <button class="w-full bg-emerald-700 hover:bg-emerald-600 text-white px-4 py-3 rounded-lg font-medium transition">Subscribe</button>
+          </form>
+          <p id="footerNewsMsg" class="text-xs mt-2 text-emerald-400"></p>
+        </div>
+      </div>
+      <div class="pt-8 text-sm text-center md:flex md:justify-between">
+        <p>© 2025 TerraVanda Packaging. All rights reserved.</p>
+        <div class="mt-4 md:mt-0 space-x-6">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+          <a href="#" class="hover:text-white transition">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="src/script.js"></script>
+</body>
+</html>

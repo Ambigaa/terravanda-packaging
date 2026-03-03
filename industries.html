@@ -1,0 +1,417 @@
+<!-- industries.html - Complete Industries Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+  <title>Industries We Serve | Sustainable Packaging Solutions</title>
+  <meta name="description" content="EcoNest provides tailored sustainable packaging solutions for e-commerce, retail, food & beverage, health & beauty, and more. Find the perfect eco-friendly packaging for your industry.">
+  <meta name="keywords" content="sustainable packaging for ecommerce, eco-friendly retail packaging, compostable food packaging, green packaging for startups">
+  <meta property="og:title" content="Industries We Serve | EcoNest Packaging">
+  <meta property="og:description" content="Tailored sustainable packaging solutions for every industry.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://terravandapackaging.com/industries">
+  <meta property="og:image" content="/images/industries-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Google Analytics Placeholder -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  
+  <!-- Tailwind CSS -->
+  <link href="src/style.css" rel="stylesheet">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    .fade-up.show { opacity: 1; transform: translateY(0); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15); }
+  </style>
+</head>
+<body class="antialiased text-stone-700 bg-neutral-50">
+  <!-- Navigation (complete) -->
+  <nav id="navbar" class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-2">
+          <span class="text-3xl font-bold text-emerald-700 tracking-tight">TerraVanda <span class="text-stone-500">Packaging</span></span>
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Home</a>
+          <a href="about.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">About</a>
+          <a href="products.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Products</a>
+          <a href="industries.html" class="nav-link text-emerald-700 font-medium border-b-2 border-emerald-700 pb-1">Industries</a>
+          <a href="blog.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Blog</a>
+          <a href="contact.html" class="nav-link text-stone-600 hover:text-emerald-700 font-medium transition">Contact</a>
+          <a href="contact.html" class="bg-emerald-700 hover:bg-emerald-800 text-white px-5 py-2.5 rounded-lg font-medium transition shadow-sm">Get Quote</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg text-stone-600 hover:bg-stone-100 focus:outline-none">
+          <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-stone-200 px-4 py-6">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="text-stone-600 hover:text-emerald-700 py-2">Home</a>
+        <a href="about.html" class="text-stone-600 hover:text-emerald-700 py-2">About</a>
+        <a href="products.html" class="text-stone-600 hover:text-emerald-700 py-2">Products</a>
+        <a href="industries.html" class="text-emerald-700 font-medium py-2">Industries</a>
+        <a href="blog.html" class="text-stone-600 hover:text-emerald-700 py-2">Blog</a>
+        <a href="contact.html" class="text-stone-600 hover:text-emerald-700 py-2">Contact</a>
+        <a href="contact.html" class="bg-emerald-700 text-white text-center px-4 py-3 rounded-lg font-medium">Get Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section - 1 (Enhanced) -->
+    <section class="relative bg-gradient-to-br from-emerald-800 to-emerald-900 text-white py-24 overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0 bg-black"></div>      
+    </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <span class="inline-block bg-emerald-600 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">🏢 TAILORED SOLUTIONS</span>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">Industries <span class="text-emerald-300">We Serve</span></h1>
+        <p class="text-xl text-emerald-100 max-w-3xl mx-auto">
+          Sustainable packaging solutions customized for the unique needs of your industry
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4 justify-center">
+          <a href="#industry-grid" class="bg-white text-emerald-800 hover:bg-emerald-50 px-8 py-4 rounded-lg font-semibold transition shadow-lg">Explore Industries</a>
+          <a href="contact.html" class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition">Get Custom Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Stats Section - 2 (New) -->
+    <section class="py-16 bg-white border-b border-stone-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <span class="text-3xl font-bold text-emerald-700">500+</span>
+            <p class="text-stone-500 mt-1">E-commerce Brands</p>
+          </div>
+          <div>
+            <span class="text-3xl font-bold text-emerald-700">200+</span>
+            <p class="text-stone-500 mt-1">Retail Partners</p>
+          </div>
+          <div>
+            <span class="text-3xl font-bold text-emerald-700">150+</span>
+            <p class="text-stone-500 mt-1">Food & Beverage</p>
+          </div>
+          <div>
+            <span class="text-3xl font-bold text-emerald-700">100+</span>
+            <p class="text-stone-500 mt-1">Startups</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Grid Section - 3 (Enhanced) -->
+    <section id="industry-grid" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="text-emerald-700 font-semibold text-lg">BY INDUSTRY</span>
+          <h2 class="mt-3 text-4xl font-bold text-stone-800">Solutions for Every Sector</h2>
+          <p class="mt-4 text-xl text-stone-500">Specialized packaging that meets the unique demands of your industry</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- E-Commerce -->
+          <div class="bg-stone-50 p-8 rounded-2xl card-hover">
+            <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center text-3xl mb-4">🛍️</div>
+            <h3 class="text-2xl font-bold text-stone-800">E-Commerce</h3>
+            <p class="mt-2 text-stone-500">Shipping boxes, compostable mailers, and void fill that protect products and impress customers.</p>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Custom-sized shipping boxes</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Compostable poly mailers</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Recycled kraft tape</li>
+            </ul>
+            <a href="products.html" class="mt-6 inline-block text-emerald-700 font-semibold hover:text-emerald-800">View Solutions →</a>
+          </div>
+
+          <!-- Retail -->
+          <div class="bg-stone-50 p-8 rounded-2xl card-hover">
+            <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center text-3xl mb-4">🏪</div>
+            <h3 class="text-2xl font-bold text-stone-800">Retail</h3>
+            <p class="mt-2 text-stone-500">Carrier bags, gift boxes, and shelf-ready packaging that aligns with your brand values.</p>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Recycled paper shopping bags</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Gift boxes and custom displays</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Branded tissue paper</li>
+            </ul>
+            <a href="products.html" class="mt-6 inline-block text-emerald-700 font-semibold hover:text-emerald-800">View Solutions →</a>
+          </div>
+
+          <!-- Food & Beverage -->
+          <div class="bg-stone-50 p-8 rounded-2xl card-hover">
+            <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center text-3xl mb-4">🍱</div>
+            <h3 class="text-2xl font-bold text-stone-800">Food & Beverage</h3>
+            <p class="mt-2 text-stone-500">Compostable containers, cups, and food-safe packaging for takeaway and delivery.</p>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Compostable food containers</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> PLA-lined cups & lids</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Grease-resistant wraps</li>
+            </ul>
+            <a href="products.html" class="mt-6 inline-block text-emerald-700 font-semibold hover:text-emerald-800">View Solutions →</a>
+          </div>
+
+          <!-- Health & Beauty (New) -->
+          <div class="bg-stone-50 p-8 rounded-2xl card-hover">
+            <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center text-3xl mb-4">🧴</div>
+            <h3 class="text-2xl font-bold text-stone-800">Health & Beauty</h3>
+            <p class="mt-2 text-stone-500">Elegant, plastic-free packaging for cosmetics, skincare, and wellness products.</p>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Glass jars with bamboo lids</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Compostable tubes</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Recycled paperboard boxes</li>
+            </ul>
+            <a href="products.html" class="mt-6 inline-block text-emerald-700 font-semibold hover:text-emerald-800">View Solutions →</a>
+          </div>
+
+          <!-- Startups -->
+          <div class="bg-stone-50 p-8 rounded-2xl card-hover">
+            <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center text-3xl mb-4">🚀</div>
+            <h3 class="text-2xl font-bold text-stone-800">Startups</h3>
+            <p class="mt-2 text-stone-500">Low minimum order quantities and sample packs for testing and launching your brand.</p>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> MOQs as low as 100 units</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Sample kits available</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Startup discount program</li>
+            </ul>
+            <a href="contact.html" class="mt-6 inline-block text-emerald-700 font-semibold hover:text-emerald-800">Learn More →</a>
+          </div>
+
+          <!-- Corporate & Enterprise (New) -->
+          <div class="bg-stone-50 p-8 rounded-2xl card-hover">
+            <div class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center text-3xl mb-4">🏢</div>
+            <h3 class="text-2xl font-bold text-stone-800">Enterprise</h3>
+            <p class="mt-2 text-stone-500">Large-scale sustainable packaging solutions for corporate sustainability goals.</p>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Bulk pricing</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Custom supply chain solutions</li>
+              <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Sustainability reporting</li>
+            </ul>
+            <a href="contact.html" class="mt-6 inline-block text-emerald-700 font-semibold hover:text-emerald-800">Contact Sales →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies Section - 4 (Enhanced) -->
+    <section class="py-20 bg-stone-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="text-emerald-700 font-semibold text-lg">SUCCESS STORIES</span>
+          <h2 class="mt-3 text-4xl font-bold text-stone-800">Real Results, Real Impact</h2>
+          <p class="mt-4 text-xl text-stone-500">See how brands across industries have transformed with EcoNest</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Case Study 1 -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+            <div class="h-48 bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center">
+              <span class="text-5xl">🌿</span>
+            </div>
+            <div class="p-8">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">E-Commerce</span>
+                <span class="text-stone-400">•</span>
+                <span class="text-stone-500 text-sm">GreenLeaf Organics</span>
+              </div>
+              <h3 class="text-2xl font-bold text-stone-800">40% Reduction in Packaging Waste</h3>
+              <p class="mt-3 text-stone-500">By switching to our custom-sized biodegradable boxes and compostable mailers, GreenLeaf eliminated excess packaging and saved 40% on shipping materials.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-emerald-700 font-semibold">-15% shipping costs</span>
+                <span class="text-emerald-700 font-semibold">50k kg waste saved</span>
+              </div>
+              <a href="#" class="mt-6 inline-block text-emerald-700 font-semibold hover:text-emerald-800">Read Case Study →</a>
+            </div>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+            <div class="h-48 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+              <span class="text-5xl">👕</span>
+            </div>
+            <div class="p-8">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">Retail</span>
+                <span class="text-stone-400">•</span>
+                <span class="text-stone-500 text-sm">EcoWear</span>
+              </div>
+              <h3 class="text-2xl font-bold text-stone-800">100% Compostable Mailers</h3>
+              <p class="mt-3 text-stone-500">EcoWear transitioned all their shipping to our home-compostable mailers, eliminating 2 tons of plastic waste annually and seeing a 25% increase in positive reviews.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-emerald-700 font-semibold">100% plastic-free</span>
+                <span class="text-emerald-700 font-semibold">+25% reviews</span>
+              </div>
+              <a href="#" class="mt-6 inline-block text-emerald-700 font-semibold hover:text-emerald-800">Read Case Study →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Benefits Section - 5 (New) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="fade-up">
+            <span class="text-emerald-700 font-semibold text-lg">WHY INDUSTRIES CHOOSE US</span>
+            <h2 class="mt-3 text-4xl font-bold text-stone-800">Packaging That Works for Your Business</h2>
+            <p class="mt-4 text-lg text-stone-500">We understand that different industries have different requirements. Our packaging is designed to meet the specific needs of your sector.</p>
+            
+            <div class="mt-8 space-y-4">
+              <div class="flex gap-3">
+                <span class="text-emerald-600 text-xl">✓</span>
+                <div>
+                  <h3 class="font-semibold">Industry-specific certifications</h3>
+                  <p class="text-stone-500">Food-safe, FDA-approved, and compostable certifications where needed.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-emerald-600 text-xl">✓</span>
+                <div>
+                  <h3 class="font-semibold">Custom sizes & specifications</h3>
+                  <p class="text-stone-500">Tailored dimensions and materials for your unique products.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-emerald-600 text-xl">✓</span>
+                <div>
+                  <h3 class="font-semibold">Volume pricing for every scale</h3>
+                  <p class="text-stone-500">From startup samples to enterprise bulk orders.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-emerald-50 p-8 rounded-3xl fade-up">
+            <h3 class="text-2xl font-bold mb-6">Quick Industry Guide</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                <span>E-Commerce</span>
+                <span class="text-emerald-700 font-semibold">Boxes, Mailers</span>
+              </div>
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                <span>Retail</span>
+                <span class="text-emerald-700 font-semibold">Bags, Gift Boxes</span>
+              </div>
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                <span>Food Service</span>
+                <span class="text-emerald-700 font-semibold">Containers, Cups</span>
+              </div>
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                <span>Beauty</span>
+                <span class="text-emerald-700 font-semibold">Jars, Tubes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section - 6 (New) -->
+    <section class="py-20 bg-emerald-700">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold text-white">Ready to Transform Your Packaging?</h2>
+        <p class="mt-4 text-xl text-emerald-100">Get a customized quote for your industry today</p>
+        <div class="mt-8 flex flex-wrap gap-4 justify-center">
+          <a href="contact.html" class="bg-white text-emerald-700 hover:bg-emerald-50 px-8 py-4 rounded-lg font-semibold transition shadow-lg">Request Industry Quote</a>
+          <a href="products.html" class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition">Browse Products</a>
+        </div>
+        <p class="mt-6 text-emerald-200 text-sm">✨ Free consultation for all new clients</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (complete) -->
+  <footer class="bg-stone-900 text-stone-400 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 pb-12 border-b border-stone-800">
+        <div>
+          <h4 class="text-2xl font-bold text-white">TerraVanda<span class="text-emerald-500">Packaging</span></h4>
+          <p class="mt-4 text-sm">Sustainable packaging solutions for a plastic-free future.</p>
+          <div class="mt-4 flex space-x-4">
+             <!-- Facebook -->
+             <a href="#" class="text-stone-400 hover:text-white transition text-xl">
+                <i class="fab fa-facebook-f"></i>
+            </a> 
+          <!-- Instagram -->
+            <a href="#" class="text-stone-400 hover:text-white transition text-xl">
+            <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Twitter/X -->
+            <a href="#" class="text-stone-400 hover:text-white transition text-xl">
+            <i class="fab fa-x-twitter"></i>
+            </a>
+  
+            <!-- LinkedIn -->
+            <a href="#" class="text-stone-400 hover:text-white transition text-xl">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-4">Products</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="products.html" class="hover:text-white transition">Biodegradable Boxes</a></li>
+            <li><a href="products.html" class="hover:text-white transition">Compostable Mailers</a></li>
+            <li><a href="products.html" class="hover:text-white transition">Recycled Bags</a></li>
+            <li><a href="products.html" class="hover:text-white transition">Custom Packaging</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-4">Company</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+            <li><a href="industries.html" class="hover:text-white transition">Industries</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold mb-4">Newsletter</h5>
+          <form id="newsletterFooter" class="space-y-3">
+            <input type="email" placeholder="Email address" class="w-full px-4 py-3 bg-stone-800 border border-stone-700 rounded-lg text-white text-sm placeholder-stone-400">
+            <button class="w-full bg-emerald-700 hover:bg-emerald-600 text-white px-4 py-3 rounded-lg font-medium transition">Subscribe</button>
+          </form>
+          <p id="footerNewsMsg" class="text-xs mt-2 text-emerald-400"></p>
+        </div>
+      </div>
+      <div class="pt-8 text-sm text-center md:flex md:justify-between">
+        <p>© 2025 EcoNest Packaging. All rights reserved.</p>
+        <div class="mt-4 md:mt-0 space-x-6">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+          <a href="#" class="hover:text-white transition">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="src/script.js"></script>
+</body>
+</html>
